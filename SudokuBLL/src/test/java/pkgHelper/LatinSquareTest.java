@@ -209,7 +209,7 @@ public class LatinSquareTest {
 		int[][] puzzle = null;
 		LatinSquare lq = new LatinSquare(puzzle);
 		
-		assertTrue(lq.isLatinSquare());
+		assertFalse(lq.isLatinSquare());
 	}
 	
 	@Test
@@ -261,7 +261,7 @@ public class LatinSquareTest {
 	public void isLatinSquare_Test7()
 	{
 //		int[][] puzzle = {{1,2,3,4},{2,3,4,1},{3,4,1,2},{4,1,2,3}};
-		int[][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
+		int[][] puzzle = {{1,2,3},{3,1,2},{2,3,1}};
 		LatinSquare lq = new LatinSquare(puzzle);
 //		System.out.println(Arrays.toString(lq.getCol(0)));
 //		System.out.println(Arrays.toString(lq.getCol(1)));
@@ -269,6 +269,15 @@ public class LatinSquareTest {
 //		System.out.println(Arrays.toString(lq.getRow(0)));
 //		System.out.println(Arrays.toString(lq.getRow(1)));
 //		System.out.println(Arrays.toString(lq.getRow(2)));
-		assertFalse(lq.isLatinSquare());
+//		System.out.println(lq.hasDuplicates(lq.getCol(0)));
+//		System.out.println(lq.hasDuplicates(lq.getCol(1)));
+//		System.out.println(lq.hasDuplicates(lq.getCol(2)));
+//		System.out.println(lq.hasDuplicates(lq.getRow(0)));
+//		System.out.println(lq.hasDuplicates(lq.getRow(1)));
+//		System.out.println(lq.hasDuplicates(lq.getRow(2)));
+//		System.out.println(lq.getLatinSquare()==null);
+//		System.out.println(lq.getLatinSquare().length);
+		
+		assertTrue(lq.isLatinSquare());
 	}
 }

@@ -118,30 +118,26 @@ public class LatinSquare {
 	public boolean isLatinSquare()
 	{
 		if(LatinSquare == null)
-			return true;
+			return false;
 		
 		for(int i=0; i<LatinSquare.length; i++)
 		{
 			if(hasDuplicates(getRow(i)) || hasDuplicates(getCol(i)))
+			{
+				return false;
+			}
+		}
+		
+		for(int r=1; r<LatinSquare.length; r++)
+		{
+			if(!hasAllValues(getRow(0),getRow(r)))
 				return false;
 		}
 		
-		for(int n : getRow(0))
+		for(int c=1; c<LatinSquare.length; c++)
 		{
-			for(int r=1; r<LatinSquare.length; r++)
-			{
-				if(!doesElementExist(getRow(r),n))
-					return false;
-			}
-		}
-		
-		for(int n : getCol(0))
-		{
-			for(int c=1; c<LatinSquare.length; c++)
-			{
-				if(!doesElementExist(getCol(c),n))
-					return false;
-			}
+			if(!hasAllValues(getCol(0),getCol(c)))
+				return false;
 		}
 		
 		return true;
