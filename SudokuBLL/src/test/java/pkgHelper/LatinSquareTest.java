@@ -263,12 +263,12 @@ public class LatinSquareTest {
 //		int[][] puzzle = {{1,2,3,4},{2,3,4,1},{3,4,1,2},{4,1,2,3}};
 		int[][] puzzle = {{1,2,3},{2,3,1},{3,1,2}};
 		LatinSquare lq = new LatinSquare(puzzle);
-		System.out.println(Arrays.toString(lq.getCol(0)));
-		System.out.println(Arrays.toString(lq.getCol(1)));
-		System.out.println(Arrays.toString(lq.getCol(2)));
-		System.out.println(Arrays.toString(lq.getRow(0)));
-		System.out.println(Arrays.toString(lq.getRow(1)));
-		System.out.println(Arrays.toString(lq.getRow(2)));
-		assertTrue(lq.isLatinSquare());
+//		System.out.println(Arrays.toString(lq.getCol(0)));
+//		System.out.println(Arrays.toString(lq.getCol(1)));
+//		System.out.println(Arrays.toString(lq.getCol(2)));
+//		System.out.println(Arrays.toString(lq.getRow(0)));
+//		System.out.println(Arrays.toString(lq.getRow(1)));
+//		System.out.println(Arrays.toString(lq.getRow(2)));
+		assertFalse(lq.isLatinSquare());
 	}
 }
