@@ -278,6 +278,6 @@ public class LatinSquareTest {
 //		System.out.println(lq.getLatinSquare()==null);
 //		System.out.println(lq.getLatinSquare().length);
 		
-		assertTrue(!lq.isLatinSquare());
+		assertTrue(lq.isLatinSquare());
 	}
 }

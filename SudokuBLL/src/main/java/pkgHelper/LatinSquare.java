@@ -96,21 +96,26 @@ public class LatinSquare {
 	
 	public boolean hasDuplicates(int [] arr)
 	{
-		boolean hasDuplicates = false;
-		
 		if(arr == null)
 			return false;
 		
-		Arrays.sort(arr);
+		boolean hasDuplicates = false;
 		
-		for(int i=0; i<arr.length-1; i++)
+		int[] tmp = new int[arr.length];
+		for(int i=0; i<arr.length; i++)
+			tmp[i] = arr[i];
+		
+		Arrays.sort(tmp);
+		
+		for(int i=0; i<tmp.length-1; i++)
 		{
-			if(arr[i] == arr[i+1])
+			if(tmp[i] == tmp[i+1])
 			{
 				hasDuplicates = true;
 				break;
 			}
 		}
+		
 		return hasDuplicates;
 	}
 	
